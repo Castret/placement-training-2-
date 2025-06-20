@@ -1,0 +1,210 @@
+// Program 21
+class SquareRoot {
+    public static void main(String[] args) {
+        double x = 25;
+        System.out.println(Math.sqrt(x));
+    }
+}
+
+// Program 22
+class Power {
+    public static void main(String[] args) {
+        int base = 2, exp = 5;
+        System.out.println(Math.pow(base, exp));
+    }
+}
+
+// Program 23
+class RandomNumber {
+    public static void main(String[] args) {
+        double r = Math.random();
+        System.out.println(r);
+    }
+}
+
+// Program 24
+class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        double c = 37;
+        double f = (c * 9/5) + 32;
+        System.out.println(f);
+    }
+}
+
+// Program 25
+class FahrenheitToCelsius {
+    public static void main(String[] args) {
+        double f = 98.6;
+        double c = (f - 32) * 5/9;
+        System.out.println(c);
+    }
+}
+
+// Program 26
+class Average {
+    public static void main(String[] args) {
+        int a = 5, b = 10, c = 15;
+        double avg = (a + b + c) / 3.0;
+        System.out.println(avg);
+    }
+}
+
+// Program 27
+class PatternStar {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= i; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+    }
+}
+
+// Program 28
+class ReverseNumber {
+    public static void main(String[] args) {
+        int num = 1234, rev = 0;
+        while(num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println(rev);
+    }
+}
+
+// Program 29
+class DecimalToBinary {
+    public static void main(String[] args) {
+        int num = 10;
+        System.out.println(Integer.toBinaryString(num));
+    }
+}
+
+// Program 30
+class BinaryToDecimal {
+    public static void main(String[] args) {
+        String binary = "1010";
+        int decimal = Integer.parseInt(binary, 2);
+        System.out.println(decimal);
+    }
+}
+
+// Program 31
+class LinearSearch {
+    public static void main(String[] args) {
+        int[] arr = {5, 8, 2, 9, 4};
+        int key = 9;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == key) {
+                System.out.println("Found at " + i);
+                break;
+            }
+        }
+    }
+}
+
+// Program 32
+class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = {5, 1, 4, 2, 8};
+        for(int i = 0; i < arr.length - 1; i++)
+            for(int j = 0; j < arr.length - i - 1; j++)
+                if(arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+        for(int num : arr)
+            System.out.print(num + " ");
+    }
+}
+
+// Program 33
+class CountVowels {
+    public static void main(String[] args) {
+        String str = "education";
+        int count = 0;
+        for(char c : str.toCharArray())
+            if("aeiou".indexOf(c) != -1)
+                count++;
+        System.out.println(count);
+    }
+}
+
+// Program 34
+class CharFrequency {
+    public static void main(String[] args) {
+        String str = "banana";
+        int[] freq = new int[256];
+        for(char c : str.toCharArray())
+            freq[c]++;
+        System.out.println(freq['a']);
+    }
+}
+
+// Program 35
+class CopyArray {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3}, b = new int[a.length];
+        for(int i = 0; i < a.length; i++)
+            b[i] = a[i];
+        for(int x : b)
+            System.out.print(x + " ");
+    }
+}
+
+// Program 36
+class MergeArrays {
+    public static void main(String[] args) {
+        int[] a = {1, 2}, b = {3, 4}, c = new int[a.length + b.length];
+        for(int i = 0; i < a.length; i++)
+            c[i] = a[i];
+        for(int i = 0; i < b.length; i++)
+            c[i + a.length] = b[i];
+        for(int x : c)
+            System.out.print(x + " ");
+    }
+}
+
+// Program 37
+class SecondLargest {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 9, 1, 7};
+        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;
+        for(int num : arr) {
+            if(num > first) {
+                second = first;
+                first = num;
+            } else if(num > second && num != first) {
+                second = num;
+            }
+        }
+        System.out.println(second);
+    }
+}
+
+// Program 38
+class CountWords {
+    public static void main(String[] args) {
+        String str = "Java is fun";
+        String[] words = str.split(" ");
+        System.out.println(words.length);
+    }
+}
+
+// Program 39
+class RemoveSpaces {
+    public static void main(String[] args) {
+        String str = "Java Program ";
+        str = str.replace(" ", "");
+        System.out.println(str);
+    }
+}
+
+// Program 40
+class StringCompare {
+    public static void main(String[] args) {
+        String a = "hello", b = "world";
+        System.out.println(a.equals(b));
+    }
+}

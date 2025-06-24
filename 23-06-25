@@ -1,0 +1,404 @@
+// Program 56
+class LCM {
+    public static void main(String[] args) {
+        int a = 15, b = 20, max = Math.max(a, b);
+        while(true) {
+            if(max % a == 0 && max % b == 0) {
+                System.out.println(max);
+                break;
+            }
+            max++;
+        }
+    }
+}
+
+// Program 57
+class SumOfCubes {
+    public static void main(String[] args) {
+        int n = 5, sum = 0;
+        for(int i = 1; i <= n; i++)
+            sum += i * i * i;
+        System.out.println(sum);
+    }
+}
+
+// Program 58
+class CountEvenOddDigits {
+    public static void main(String[] args) {
+        int n = 123456;
+        int even = 0, odd = 0;
+        while(n != 0) {
+            int d = n % 10;
+            if(d % 2 == 0) even++;
+            else odd++;
+            n /= 10;
+        }
+        System.out.println("Even: " + even + ", Odd: " + odd);
+    }
+}
+
+// Program 59
+class ReverseWords {
+    public static void main(String[] args) {
+        String str = "Java is powerful";
+        String[] words = str.split(" ");
+        for(int i = words.length - 1; i >= 0; i--)
+            System.out.print(words[i] + " ");
+    }
+}
+
+// Program 60
+class FirstRepeatedChar {
+    public static void main(String[] args) {
+        String str = "success";
+        for(int i = 0; i < str.length(); i++) {
+            if(str.indexOf(str.charAt(i)) != i) {
+                System.out.println(str.charAt(i));
+                break;
+            }
+        }
+    }
+}
+
+// Program 61
+class RemoveChar {
+    public static void main(String[] args) {
+        String str = "banana";
+        char toRemove = 'a';
+        str = str.replace(String.valueOf(toRemove), "");
+        System.out.println(str);
+    }
+}
+
+// Program 62
+class VowelConsonantCount {
+    public static void main(String[] args) {
+        String str = "Programming";
+        int v = 0, c = 0;
+        str = str.toLowerCase();
+        for(char ch : str.toCharArray()) {
+            if("aeiou".indexOf(ch) != -1) v++;
+            else if(Character.isLetter(ch)) c++;
+        }
+        System.out.println("Vowels: " + v + ", Consonants: " + c);
+    }
+}
+
+// Program 63
+class FrequencyArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 1, 3, 2, 1};
+        int[] freq = new int[10];
+        for(int num : arr)
+            freq[num]++;
+        for(int i = 0; i < freq.length; i++)
+            if(freq[i] > 0)
+                System.out.println(i + ":" + freq[i]);
+    }
+}
+
+// Program 64
+class CapitalizeFirstLetter {
+    public static void main(String[] args) {
+        String str = "hello world";
+        String[] words = str.split(" ");
+        for(String word : words)
+            System.out.print(Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ");
+    }
+}
+
+// Program 65
+class PowerOfTwo {
+    public static void main(String[] args) {
+        int n = 16;
+        boolean result = (n & (n - 1)) == 0;
+        System.out.println(result);
+    }
+}
+
+// Program 66
+class FindMissingNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5};
+        int n = 5;
+        int total = n * (n + 1) / 2;
+        for(int num : arr)
+            total -= num;
+        System.out.println(total);
+    }
+}
+
+// Program 67
+class CheckSubstring {
+    public static void main(String[] args) {
+        String a = "hello world", b = "world";
+        System.out.println(a.contains(b));
+    }
+}
+
+// Program 68
+class CountWhiteSpaces {
+    public static void main(String[] args) {
+        String str = "this is a test";
+        int count = 0;
+        for(char ch : str.toCharArray())
+            if(Character.isWhitespace(ch)) count++;
+        System.out.println(count);
+    }
+}
+
+// Program 69
+class RemoveNonAlphabets {
+    public static void main(String[] args) {
+        String str = "abc123!@#";
+        str = str.replaceAll("[^A-Za-z]", "");
+        System.out.println(str);
+    }
+}
+
+// Program 70
+class SumPrimeDigits {
+    public static void main(String[] args) {
+        int n = 23957, sum = 0;
+        while(n != 0) {
+            int d = n % 10;
+            if(d == 2 || d == 3 || d == 5 || d == 7)
+                sum += d;
+            n /= 10;
+        }
+        System.out.println(sum);
+    }
+}
+
+// Program 71
+class CountChars {
+    public static void main(String[] args) {
+        String str = "apple";
+        char ch = 'p';
+        int count = 0;
+        for(char c : str.toCharArray())
+            if(c == ch) count++;
+        System.out.println(count);
+    }
+}
+
+// Program 72
+class StringAnagram {
+    public static void main(String[] args) {
+        String a = "listen", b = "silent";
+        char[] x = a.toCharArray(), y = b.toCharArray();
+        java.util.Arrays.sort(x);
+        java.util.Arrays.sort(y);
+        System.out.println(java.util.Arrays.equals(x, y));
+    }
+}
+
+// Program 73
+class PrimeInRange {
+    public static void main(String[] args) {
+        int start = 10, end = 30;
+        for(int i = start; i <= end; i++) {
+            int flag = 0;
+            for(int j = 2; j <= i/2; j++) {
+                if(i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if(i > 1 && flag == 0)
+                System.out.print(i + " ");
+        }
+    }
+}
+
+// Program 74
+class PangramCheck {
+    public static void main(String[] args) {
+        String str = "The quick brown fox jumps over the lazy dog";
+        str = str.toLowerCase().replaceAll("[^a-z]", "");
+        java.util.Set<Character> set = new java.util.HashSet<>();
+        for(char ch : str.toCharArray())
+            set.add(ch);
+        System.out.println(set.size() == 26);
+    }
+}
+
+// Program 75
+class LeftRotateArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4};
+        int temp = arr[0];
+        for(int i = 0; i < arr.length - 1; i++)
+            arr[i] = arr[i + 1];
+        arr[arr.length - 1] = temp;
+        for(int x : arr)
+            System.out.print(x + " ");
+    }
+}
+
+// Program 76
+class PalindromeString {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = new StringBuilder(str).reverse().toString();
+        System.out.println(str.equals(rev));
+    }
+}
+
+// Program 77
+class SumWithoutLoop {
+    public static void main(String[] args) {
+        int n = 100;
+        System.out.println(n * (n + 1) / 2);
+    }
+}
+
+// Program 78
+class RemoveDuplicateArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 3, 4, 4};
+        java.util.Set<Integer> set = new java.util.LinkedHashSet<>();
+        for(int num : arr)
+            set.add(num);
+        for(int x : set)
+            System.out.print(x + " ");
+    }
+}
+
+// Program 79
+class UniqueCharacters {
+    public static void main(String[] args) {
+        String str = "java";
+        java.util.Set<Character> set = new java.util.HashSet<>();
+        for(char c : str.toCharArray())
+            set.add(c);
+        System.out.println(set.size() == str.length());
+    }
+}
+
+// Program 80
+class CountSpecialCharacters {
+    public static void main(String[] args) {
+        String str = "abc@123#";
+        int count = 0;
+        for(char c : str.toCharArray())
+            if(!Character.isLetterOrDigit(c)) count++;
+        System.out.println(count);
+    }
+}
+
+// Program 81
+class CountUpperCase {
+    public static void main(String[] args) {
+        String str = "HeLLo";
+        int count = 0;
+        for(char c : str.toCharArray())
+            if(Character.isUpperCase(c)) count++;
+        System.out.println(count);
+    }
+}
+
+// Program 82
+class ReverseArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4};
+        for(int i = arr.length - 1; i >= 0; i--)
+            System.out.print(arr[i] + " ");
+    }
+}
+
+// Program 83
+class CompareIgnoreCase {
+    public static void main(String[] args) {
+        String a = "Hello", b = "hello";
+        System.out.println(a.equalsIgnoreCase(b));
+    }
+}
+
+// Program 84
+class SumMatrixDiagonal {
+    public static void main(String[] args) {
+        int[][] mat = {{1, 2}, {3, 4}};
+        int sum = 0;
+        for(int i = 0; i < mat.length; i++)
+            sum += mat[i][i];
+        System.out.println(sum);
+    }
+}
+
+// Program 85
+class RemoveDuplicatesString {
+    public static void main(String[] args) {
+        String str = "programming";
+        StringBuilder sb = new StringBuilder();
+        for(char c : str.toCharArray())
+            if(sb.indexOf(String.valueOf(c)) == -1)
+                sb.append(c);
+        System.out.println(sb.toString());
+    }
+}
+
+// Program 86
+class CountWordsWithLength {
+    public static void main(String[] args) {
+        String str = "This is Java code";
+        String[] words = str.split(" ");
+        for(String w : words)
+            System.out.println(w + " : " + w.length());
+    }
+}
+
+// Program 87
+class PrintTriangleNumbers {
+    public static void main(String[] args) {
+        int n = 5, num = 1;
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= i; j++)
+                System.out.print(num++ + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Program 88
+class SumOfOddEvenIndexed {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40};
+        int evenSum = 0, oddSum = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(i % 2 == 0)
+                evenSum += arr[i];
+            else
+                oddSum += arr[i];
+        }
+        System.out.println("Even: " + evenSum + ", Odd: " + oddSum);
+    }
+}
+
+// Program 89
+class ToggleCase {
+    public static void main(String[] args) {
+        String str = "JaVa";
+        StringBuilder sb = new StringBuilder();
+        for(char c : str.toCharArray()) {
+            if(Character.isUpperCase(c))
+                sb.append(Character.toLowerCase(c));
+            else
+                sb.append(Character.toUpperCase(c));
+        }
+        System.out.println(sb.toString());
+    }
+}
+
+// Program 90
+class LongestWord {
+    public static void main(String[] args) {
+        String str = "Java is a powerful language";
+        String[] words = str.split(" ");
+        String longest = "";
+        for(String w : words)
+            if(w.length() > longest.length())
+                longest = w;
+        System.out.println(longest);
+    }
+}

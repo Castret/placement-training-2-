@@ -1,0 +1,108 @@
+// Program 41
+class SumArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4};
+        int sum = 0;
+        for(int x : arr)
+            sum += x;
+        System.out.println(sum);
+    }
+}
+
+// Program 42
+class TransposeMatrix {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}};
+        for(int i = 0; i < 2; i++) {
+            for(int j = 0; j < 2; j++)
+                System.out.print(a[j][i] + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Program 43
+class MatrixAddition {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}}, b = {{5, 6}, {7, 8}}, c = new int[2][2];
+        for(int i = 0; i < 2; i++)
+            for(int j = 0; j < 2; j++)
+                c[i][j] = a[i][j] + b[i][j];
+        for(int[] row : c) {
+            for(int x : row)
+                System.out.print(x + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Program 44
+class MatrixMultiplication {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}}, b = {{2, 0}, {1, 2}}, c = new int[2][2];
+        for(int i = 0; i < 2; i++)
+            for(int j = 0; j < 2; j++)
+                for(int k = 0; k < 2; k++)
+                    c[i][j] += a[i][k] * b[k][j];
+        for(int[] row : c) {
+            for(int x : row)
+                System.out.print(x + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Program 45
+class StringReverseBuiltIn {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("hello");
+        sb.reverse();
+        System.out.println(sb.toString());
+    }
+}
+
+// Program 46
+class CharToInt {
+    public static void main(String[] args) {
+        char c = '7';
+        int num = Character.getNumericValue(c);
+        System.out.println(num);
+    }
+}
+
+// Program 47
+class SumNaturalNumbers {
+    public static void main(String[] args) {
+        int n = 100;
+        int sum = n * (n + 1) / 2;
+        System.out.println(sum);
+    }
+}
+
+// Program 48
+class IntToString {
+    public static void main(String[] args) {
+        int num = 123;
+        String str = Integer.toString(num);
+        System.out.println(str);
+    }
+}
+
+// Program 49
+class StringToCharArray {
+    public static void main(String[] args) {
+        String str = "Java";
+        char[] arr = str.toCharArray();
+        for(char c : arr)
+            System.out.print(c + " ");
+    }
+}
+
+// Program 50
+class TriangleArea {
+    public static void main(String[] args) {
+        double b = 5.0, h = 7.0;
+        double area = 0.5 * b * h;
+        System.out.println(area);
+    }
+}

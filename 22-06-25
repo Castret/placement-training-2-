@@ -1,0 +1,63 @@
+// Program 51
+class SumOfSquares {
+    public static void main(String[] args) {
+        int n = 5, sum = 0;
+        for(int i = 1; i <= n; i++)
+            sum += i * i;
+        System.out.println(sum);
+    }
+}
+
+// Program 52
+class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "programming";
+        String result = "";
+        for(int i = 0; i < str.length(); i++) {
+            if(result.indexOf(str.charAt(i)) == -1)
+                result += str.charAt(i);
+        }
+        System.out.println(result);
+    }
+}
+
+// Program 53
+class CountUpperLower {
+    public static void main(String[] args) {
+        String str = "JavaPro123";
+        int upper = 0, lower = 0;
+        for(char c : str.toCharArray()) {
+            if(Character.isUpperCase(c))
+                upper++;
+            else if(Character.isLowerCase(c))
+                lower++;
+        }
+        System.out.println("Upper: " + upper + ", Lower: " + lower);
+    }
+}
+
+// Program 54
+class AllDivisors {
+    public static void main(String[] args) {
+        int n = 28;
+        for(int i = 1; i <= n; i++) {
+            if(n % i == 0)
+                System.out.print(i + " ");
+        }
+    }
+}
+
+// Program 55
+class PerfectNumber {
+    public static void main(String[] args) {
+        int n = 28, sum = 0;
+        for(int i = 1; i < n; i++) {
+            if(n % i == 0)
+                sum += i;
+        }
+        if(sum == n)
+            System.out.println("Perfect Number");
+        else
+            System.out.println("Not Perfect Number");
+    }
+}

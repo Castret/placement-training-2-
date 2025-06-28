@@ -1,0 +1,129 @@
+// Program 91
+class FindGCDRecursive {
+    public static int gcd(int a, int b) {
+        if(b == 0) return a;
+        return gcd(b, a % b);
+    }
+    public static void main(String[] args) {
+        System.out.println(gcd(48, 18));
+    }
+}
+
+// Program 92
+class CountDigitFrequency {
+    public static void main(String[] args) {
+        int num = 112358, digit = 1, count = 0;
+        while(num != 0) {
+            if(num % 10 == digit)
+                count++;
+            num /= 10;
+        }
+        System.out.println(count);
+    }
+}
+
+// Program 93
+class PalindromeWordsInSentence {
+    public static void main(String[] args) {
+        String str = "madam racecar level test";
+        String[] words = str.split(" ");
+        for(String word : words) {
+            String rev = new StringBuilder(word).reverse().toString();
+            if(word.equals(rev))
+                System.out.println(word);
+        }
+    }
+}
+
+// Program 94
+class SumOfFactors {
+    public static void main(String[] args) {
+        int n = 12, sum = 0;
+        for(int i = 1; i <= n; i++) {
+            if(n % i == 0)
+                sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+// Program 95
+class CountDigitsWordsSpecials {
+    public static void main(String[] args) {
+        String str = "Java123 @Code!";
+        int digit = 0, letter = 0, special = 0;
+        for(char c : str.toCharArray()) {
+            if(Character.isDigit(c)) digit++;
+            else if(Character.isLetter(c)) letter++;
+            else special++;
+        }
+        System.out.println("Digits:" + digit + " Letters:" + letter + " Specials:" + special);
+    }
+}
+
+// Program 96
+class FibonacciRecursion {
+    public static int fib(int n) {
+        if(n <= 1) return n;
+        return fib(n - 1) + fib(n - 2);
+    }
+    public static void main(String[] args) {
+        for(int i = 0; i < 10; i++)
+            System.out.print(fib(i) + " ");
+    }
+}
+
+// Program 97
+class BinarySearch {
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8, 10, 12};
+        int key = 8, low = 0, high = arr.length - 1;
+        while(low <= high) {
+            int mid = (low + high) / 2;
+            if(arr[mid] == key) {
+                System.out.println("Found at " + mid);
+                return;
+            } else if(arr[mid] < key)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        System.out.println("Not found");
+    }
+}
+
+// Program 98
+class CountPairsWithSum {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 7, -1, 5};
+        int sum = 6, count = 0;
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i + 1; j < arr.length; j++) {
+                if(arr[i] + arr[j] == sum)
+                    count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+// Program 99
+class ReverseEachWord {
+    public static void main(String[] args) {
+        String str = "Java code test";
+        String[] words = str.split(" ");
+        for(String word : words)
+            System.out.print(new StringBuilder(word).reverse().toString() + " ");
+    }
+}
+
+// Program 100
+class AverageOfArray {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50};
+        int sum = 0;
+        for(int x : arr) sum += x;
+        double avg = (double) sum / arr.length;
+        System.out.println(avg);
+    }
+}

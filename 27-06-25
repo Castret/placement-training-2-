@@ -1,0 +1,108 @@
+# Program 21
+n = 5
+for i in range(1, 11):
+    print(f"{n} x {i} = {n*i}")
+
+# Program 22
+s = "hello"
+print(s.count('l'))
+
+# Program 23
+x = 25
+print(x**0.5)
+
+# Program 24
+a, b = 5, 10
+a, b = b, a
+print(a, b)
+
+# Program 25
+num = 1234
+rev = 0
+while num != 0:
+    rev = rev * 10 + num % 10
+    num //= 10
+print(rev)
+
+# Program 26
+lst = [3, 1, 4, 1, 5]
+print(max(lst))
+
+# Program 27
+s = "Python"
+vowels = "aeiouAEIOU"
+print(sum(1 for c in s if c in vowels))
+
+# Program 28
+x = 10
+if x % 3 == 0 and x % 5 == 0:
+    print("FizzBuzz")
+elif x % 3 == 0:
+    print("Fizz")
+elif x % 5 == 0:
+    print("Buzz")
+else:
+    print(x)
+
+# Program 29
+lst = [1, 2, 3, 4, 5]
+squares = [x**2 for x in lst]
+print(squares)
+
+# Program 30
+words = ["apple", "banana", "cat"]
+longest = max(words, key=len)
+print(longest)
+
+# Program 31
+sentence = "a quick brown fox"
+char_freq = {}
+for ch in sentence:
+    if ch != ' ':
+        char_freq[ch] = char_freq.get(ch, 0) + 1
+print(char_freq)
+
+# Program 32
+x = -10
+print(abs(x))
+
+# Program 33
+word = "programming"
+duplicates = set()
+for ch in word:
+    if word.count(ch) > 1:
+        duplicates.add(ch)
+print("".join(duplicates))
+
+# Program 34
+for i in range(1, 6):
+    print(" " * (5 - i) + "*" * i)
+
+# Program 35
+lst = [2, 3, 5, 7, 11]
+print(sum(lst) / len(lst))
+
+# Program 36
+from random import randint
+print(randint(1, 100))
+
+# Program 37
+lst = [2, 3, 6, 9]
+evens = [x for x in lst if x % 2 == 0]
+print(evens)
+
+# Program 38
+def factorial(n):
+    return 1 if n == 0 else n * factorial(n - 1)
+print(factorial(6))
+
+# Program 39
+s = "Data123Science"
+letters = "".join(filter(str.isalpha, s))
+print(letters)
+
+# Program 40
+nums = [1, 2, 3, 2, 4]
+unique = []
+[unique.append(x) for x in nums if x not in unique]
+print(unique)

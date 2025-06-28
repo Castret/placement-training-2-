@@ -1,0 +1,91 @@
+# Program 41
+s = "pythonprogramming"
+print("Yes" if 'gram' in s else "No")
+
+# Program 42
+x = 5.6789
+print(round(x, 2))
+
+# Program 43
+from math import pi
+r = 3
+print(pi * r * r)
+
+# Program 44
+lst = [1, 2, 3, 4, 5]
+print(lst[::-1])
+
+# Program 45
+import calendar
+print(calendar.isleap(2024))
+
+# Program 46
+x = [1, 2, 2, 3]
+print(len(set(x)) == len(x))
+
+# Program 47
+a = [1, 2, 3]
+b = [3, 4, 5]
+print(list(set(a) & set(b)))
+
+# Program 48
+x = "hello123"
+digits = [c for c in x if c.isdigit()]
+print("".join(digits))
+
+# Program 49
+for i in range(65, 70):
+    print(chr(i), end=" ")
+
+# Program 50
+nums = [1, 2, 3, 4]
+prod = 1
+for n in nums:
+    prod *= n
+print(prod)
+
+# Program 51
+x = 5.6
+print(int(x))
+
+# Program 52
+from datetime import date
+print(date.today())
+
+# Program 53
+name = "Alice"
+age = 23
+print(f"{name} is {age} years old")
+
+# Program 54
+x = "Hello"
+print(ord(x[0]))
+
+# Program 55
+lst = [1, 2, 3]
+pairs = [(i, j) for i in lst for j in lst if i != j]
+print(pairs)
+
+# Program 56
+nums = [5, 3, 6, 2]
+nums.sort(reverse=True)
+print(nums)
+
+# Program 57
+text = "a b c d"
+print(text.replace(" ", "-"))
+
+# Program 58
+lst = [10, 20, 30, 40]
+print(all(x > 0 for x in lst))
+
+# Program 59
+data = [10, 15, 20, 25]
+even = filter(lambda x: x % 2 == 0, data)
+print(list(even))
+
+# Program 60
+text = "The sky is blue"
+words = text.split()
+words.sort()
+print(" ".join(words))
